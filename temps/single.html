@@ -1,0 +1,56 @@
+<div class="col-lg-6 col-md-8">
+    <div class="well bs-component">
+        <form ng-submit="submit()" class="form-horizontal">
+            <fieldset>
+                <legend>Fill this form to add a new video</legend>
+                <div class="form-group">
+                    <label for="title" class="col-lg-2 control-label">Title*</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="title" ng-model="title" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="length" class="col-lg-2 control-label">Length</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="length" ng-model="length">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="category" class="col-lg-2 control-label">Category*</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="category" ng-model="category" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subscribers" class="col-lg-2 control-label">Subscribers </label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="subscribers" ng-model="subscribers">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date" class="col-lg-2 control-label">Date*</label>
+                    <div class="col-lg-10">
+                        <input type="date" class="form-control" id="date" ng-model="date" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subtitles" class="col-lg-2 control-label">Subtitles</label>
+                    <div class="col-lg-10">
+                        <label>
+                            <input type="checkbox" id="subtitles" ng-model="subtitles"><span id="yes">Yes</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <div class="right">
+                            <a href="#/"><button class="btn btn-default">Cancel</button></a>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th><a href="" ng-click="sortField = 'title'; reverse=!reverse">Title</a></th>
+            <th><a href="" ng-click="sortField = 'length'; reverse=!reverse">Length</a></th>
+            <th><a href="" ng-click="sortField = 'category'; reverse=!reverse">Category</a></th>
+            <th><a href="" ng-click="sortField = 'subscribers'; reverse=!reverse">Subscribers</a></th>
+            <th><a href="" ng-click="sortField = 'date'; reverse=!reverse">Date</a></th>
+            <th><a href="" ng-click="sortField = 'haveSubtitles'; reverse=!reverse">Subtitles</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="video in videos | filter:search | orderBy:sortField:reverse">
+            <td>{{video.title}}</td>
+            <td>{{video.length}}</td>
+            <td>{{video.category}}</td>
+            <td>{{video.subscribers}}</td>
+            <td>{{video.date.toString().substr(0, 15)}}</td>
+            <td>{{video.haveSubtitles ? 'Yes' : 'No'}}</td>
+        </tr>
+    </tbody>
+</table>
+<input id="search" type="text" class="form-control" placeholder="Search" ng-model="search">
+<a href="#/add"><button class="btn btn-primary right">Add new video</button></a>
